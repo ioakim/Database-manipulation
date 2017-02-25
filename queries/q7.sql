@@ -1,0 +1,1 @@
+﻿UPDATE Book SET Price=Price-(Price*0.25) WHERE Book.CategoryID =100;

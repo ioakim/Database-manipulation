@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+	<head>
+		<script type="text/javascript" src="static/jquery.js"></script>
+		<script type="text/javascript" src="static/validation.js"></script>
+		
+	</head>
+	
+	<body>
+		<header>
+			<h1 style="color:red;">{{msg1}}</h1><br/>
+			<h2 style="color:red;">{{error}}</h2><br/>
+			
+			<h1>What would you like to do?</h1>			
+		</header>	
+		
+		<nav>
+			<a href="#main1">Create a new category</a><br/>
+			<a href="#main2">Delete a category</a><br/>
+			<a href="#main3">Create report of available books</a><br/>
+			<a href="#main4">Create report of publisher activity</a><br/>
+			<a href="#main5">Create report of order history for a book</a><br/>
+			<a href="#main6">Create report of sales represantive performance</a><br/>
+			<a href="#main7">Apply discount on a category of books</a>
+		</nav>	
+		
+		
+		<div id=main1>
+			<h1> Create a new category </h1>
+			<form id="addCategory" action="addCategory" method="post">
+				<input id="categoryID" type="text" name="categoryID" maxlength="50" size="49" placeholder="Please enter the category ID here" ><br/>
+				<input id="name" type="text" name="name" maxlength="32" size="49" placeholder="Please enter the category name here"><br/>
+				<select id="categorytype" name="categorytype" >
+					<option value='fiction'>fiction</option>
+					<option value='Non-fiction'>Non-fiction</option>
+				</select><br/>
+						
+				<input id=btn type="submit" name="add category">
+			</form>
+		</div>
+		
+		<div id=main2>
+			<h1> Delete a category </h1>
+			<form id="deleteCategory" action="deleteCategory" method="post">
+				<input id="categoryID" type="text" name="categoryID" maxlength="50" size="49" placeholder="Please enter the category ID to be deleted here"><br/>
+				
+				<input id=btn type="submit" name="delete category">
+			</form>
+		</div>
+		
+		<div id=main3>
+			<h1> Available books </h1>
+			<form id="booksAvailable" action="booksAvailable" method="get">
+			
+				<input id=btn type="submit" name="Produce report">
+			</form>
+		</div>
+		
+		<div id=main4>
+			<h1> Publisher activity </h1>
+			<form id="reportPublisher" action="reportPublisher" method="get">
+				<input id="publishername" type="text" name="publishername" maxlength="50" size="49" placeholder="Please enter the publisher name here"><br/>
+				
+				<input id=btn type="submit" name="view publisher activity">
+			</form>
+		</div>
+		
+		<div id=main5>
+			<h1> Book sells </h1>
+			<form id="reportBook" action="reportBook" method="get">
+				<input id="bookID" type="text" name="bookID" maxlength="50" size="49" placeholder="Please enter the book ID here"><br/>
+				
+				<input id=btn type="submit" name="produce order history">
+			</form>
+		</div>
+		
+		<div id=main6>
+			<h1> Sales represantatives performance </h1>
+			<form id="salesRepPerformance" action="salesRepPerformance" method="GET">
+				<input id="start" type="date" name="start" maxlength="32" size="49" placeholder="Type start date(year-mm-dd):"><br/>
+				<input id="end" type="date" name="end" maxlength="32" size="49" placeholder="Type end date(year-mm-dd):"><br/>
+				
+				<input id=btn type="submit" name="show performance">
+			</form>
+		</div>
+		
+		<div id=main7>
+			<h1> Make a Discount </h1>
+			<form id="discountCategory" action="discountCategory" method="post">
+				<input id="categoryID" type="text" name="categoryID" maxlength="50" size="49" placeholder="Please enter the category ID here"><br/>
+				<input id="discount" type="text" name="discount" maxlength="32" size="49" placeholder="Please enter the the percentage of discount here"><br/>
+				
+				<input id=btn type="submit" name="make discount">
+			</form>
+		</div>
+		
+	</body>
+	
+</html>

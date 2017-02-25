@@ -1,0 +1,1 @@
+﻿INSERT INTO category(CategoryID, Name, CategoryType) VALUES (1, 'name' , fiction);

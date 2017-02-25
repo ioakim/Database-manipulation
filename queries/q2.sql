@@ -1,0 +1,1 @@
+﻿DELETE FROM Category WHERE CategoryID = 1;
